@@ -1,12 +1,15 @@
  <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="index.css">
-<title>HTML Tutorial</title>
+<title>Trollkarlskampen</title>
 <body>
-<p id="demo"></p>
+<div id="test">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
 
 </body>
 
@@ -32,13 +35,17 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+var spans = document.getElementById("test").children;
+spans[0].innerHTML = days;
+spans[1].innerHTML = hours;
+spans[2].innerHTML = minutes;
+spans[3].innerHTML = seconds;
+//alert(spans[0].innerHTML);
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("test").innerHTML = "NU ÅKER VI!!";
   }
 }, 1000);
 </script>
