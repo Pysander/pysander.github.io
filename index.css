@@ -59,7 +59,7 @@ div{
     position:relative
 }
 div:before{
-    content:"Trollkarlskampen!!";
+    content:"Trollkarlskampen 4";
     position:absolute;
     margin-top:-7vw;
     text-align:center;
